@@ -103,6 +103,5 @@ local character = nil
 
 Player.CharacterAdded:Connect(function(newCharacter)
 wait(3)
-    
     character = newCharacter
 end
