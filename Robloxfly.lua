@@ -1,3 +1,11 @@
+--[[
+Fly mobile, hehehehe
+Converted Version :
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Robloxindonesiagithub30/-Robloxindonesia30scriptbase-/Robloxindoneska30/Robloxfly.lua",true))()
+--]]
+-- I don't obsfucate scripts, this is a public way
+-- Enjoy your time with my scripts
+
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextButton = Instance.new("TextButton")
@@ -21,6 +29,17 @@ Frame.Size = UDim2.new(0.2,0.2,0.2)
 Frame.Active = true
 Frame.Draggable = true
 
+local t = 5;
+local tick = tick
+local fromHSV = Color3.fromHSV
+local RunService = game:GetService("RunService")
+
+RunService:BindToRenderStep("Rainbow", 1000, function()
+	local hue = tick() % t / t
+	local color = fromHSV(hue, 1, 1)
+	Frame.BackgroundColor3 = color
+end)
+
 TextButton.Parent = Frame
 TextButton.BackgroundColor3 = Color3.new(5,5,5)
 TextButton.BackgroundTransparency = 0.80000001192093
@@ -28,7 +47,7 @@ TextButton.Position = UDim2.new(0.103524067, 0, 0.200333327, 0)
 TextButton.Size = UDim2.new(0.8,0.9,0.6)
 TextButton.Font = Enum.Font.SourceSansLight
 TextButton.FontSize = Enum.FontSize.Size14
-TextButton.Text = "Fly is Off"
+TextButton.Text = "Activate(Restart the Script If you died)"
 TextButton.TextScaled = true
 TextButton.TextSize = 8
 TextButton.TextWrapped = true
@@ -85,9 +104,11 @@ Player.Character.Humanoid.Changed:Connect(function()
 		IsFlying = false
 		flyg:Destroy()
 		flyv:Destroy()
-		TextButton.Text = "You died! Restarting The Script..."
+		TextButton.Text = "You died while flying restart the script"
       TextButton.TextColor3 = Color3.fromRGB(255,0,0)
+      wait(10)
 ScreenGui:Destroy()
+
 		end
 		end
 	end)
@@ -99,11 +120,3 @@ ScreenGui:Destroy()
 				IsRunning = true
 			end	
 	end)
-
-local character = nil
-
-Player.CharacterAdded:Connect(function(newCharacter)
-wait(3)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Robloxindonesiagithub30/-Robloxindonesia30scriptbase-/Robloxindoneska30/Robloxfly.lua", true))()
-    character = newCharacter
-end
