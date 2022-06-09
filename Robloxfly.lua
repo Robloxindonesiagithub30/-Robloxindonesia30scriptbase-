@@ -1,7 +1,6 @@
 --[[
 Fly mobile, hehehehe
-Converted Version :
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Robloxindonesiagithub30/-Robloxindonesia30scriptbase-/Robloxindoneska30/Robloxfly.lua",true))()
+Enjoy your stay
 --]]
 -- I don't obsfucate scripts, this is a public way
 -- Enjoy your time with my scripts
@@ -29,17 +28,6 @@ Frame.Size = UDim2.new(0.2,0.2,0.2)
 Frame.Active = true
 Frame.Draggable = true
 
-local t = 5;
-local tick = tick
-local fromHSV = Color3.fromHSV
-local RunService = game:GetService("RunService")
-
-RunService:BindToRenderStep("Rainbow", 1000, function()
-	local hue = tick() % t / t
-	local color = fromHSV(hue, 1, 1)
-	Frame.BackgroundColor3 = color
-end)
-
 TextButton.Parent = Frame
 TextButton.BackgroundColor3 = Color3.new(5,5,5)
 TextButton.BackgroundTransparency = 0.80000001192093
@@ -47,7 +35,7 @@ TextButton.Position = UDim2.new(0.103524067, 0, 0.200333327, 0)
 TextButton.Size = UDim2.new(0.8,0.9,0.6)
 TextButton.Font = Enum.Font.SourceSansLight
 TextButton.FontSize = Enum.FontSize.Size14
-TextButton.Text = "Activate(Restart the Script If you died)"
+TextButton.Text = "Activate Fly(Restart the Script if you died)"
 TextButton.TextScaled = true
 TextButton.TextSize = 8
 TextButton.TextWrapped = true
