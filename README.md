@@ -1,2 +1,1 @@
-# -Robloxindonesia30scriptbase-
-This is the script base where i Will posting roblox scripts
+# This is the storage unit i will be posting scripts on.
