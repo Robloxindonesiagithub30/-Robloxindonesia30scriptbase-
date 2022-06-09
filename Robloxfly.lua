@@ -85,7 +85,7 @@ Player.Character.Humanoid.Changed:Connect(function()
 		IsFlying = false
 		flyg:Destroy()
 		flyv:Destroy()
-		TextButton.Text = "You died! Restarting The Script..."
+		TextButton.Text = "You died! Restart The Script"
       TextButton.TextColor3 = Color3.fromRGB(255,0,0)
 		end
 		end
@@ -98,11 +98,3 @@ Player.Character.Humanoid.Changed:Connect(function()
 				IsRunning = true
 			end	
 	end)
-
-local character = nil
-
-Player.CharacterAdded:Connect(function(newCharacter)
-wait(3)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Robloxindonesiagithub30/-Robloxindonesia30scriptbase-/Robloxindoneska30/Robloxfly.lua",true))()
-    character = newCharacter
-end
