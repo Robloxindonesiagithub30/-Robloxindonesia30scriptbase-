@@ -94,13 +94,22 @@ Player.Character.Humanoid.Changed:Connect(function()
 		flyv:Destroy()
 		TextButton.Text = "You died while flying restart the script"
       TextButton.TextColor3 = Color3.fromRGB(255,0,0)
-      wait(10)
+      wait(6)
 ScreenGui:Destroy()
 
 		end
 		end
 	end)
-	Player.Character.Humanoid.Changed:Connect(function(Prop)
+
+Player.Character.Humanoid.Changed:Connect(function(detector)
+if Player.Character.Humanoid.Health == 0 then
+TextButton.Text = "You died, restart the script"
+      TextButton.TextColor3 = Color3.fromRGB(255,0,0)
+wait(6)
+ScreenGui:Destroy()
+end
+end)
+Player.Character.Humanoid.Changed:Connect(function(Prop)
 		
 			if Player.Character.Humanoid.MoveDirection == Vector3.new(0,0,0) then
 				IsRunning = false
